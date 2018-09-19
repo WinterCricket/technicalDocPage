@@ -1,0 +1,6 @@
+body.grid-container {
+	display: grid;
+	grid-template-columns: minmax(300px, auto;) 1fr;
+	/*set up what goes into this or that column*/
+	grid-template-areas: "navbar maindoc";
+}
