@@ -1,6 +1,6 @@
 body.grid-container {
 	display: grid;
-	grid-template-columns: minmax(300px, auto) 1fr;
+	grid-template-columns: minmax(250px, auto) 1fr;
 	/*set up what goes into this or that column*/
 	grid-template-areas: "navbar maindoc";
 	grid-gap: 20px;
@@ -13,12 +13,43 @@ nav#navbar {
 
 nav#navbar a {
 	display: block;
-	border: 1px solid black;
+	
 	padding: 10px;
 	margin: 20px 0;
-	
+	text-decoration: none;
+	color: black;
 }
 
 main#main-doc {
 	grid-area: maindoc;
+}
+
+
+header {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+code {
+	background-color: salmon;
+	display: block;
+	padding: 20px;
+}
+
+section {
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 650px) {
+	body.grid-container {
+		grid-template-columns: 1fr;
+		grid-template-areas: "navbar" "maindoc";
+	}
+	nav#navbar a {
+		border-top: 1px solid black;
+	}
+	nav#navbar {
+		position: inherit;
+		border-bottom: 1px solid black;
+	}
 }
