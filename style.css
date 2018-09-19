@@ -1,6 +1,24 @@
 body.grid-container {
 	display: grid;
-	grid-template-columns: minmax(300px, auto;) 1fr;
+	grid-template-columns: minmax(300px, auto) 1fr;
 	/*set up what goes into this or that column*/
 	grid-template-areas: "navbar maindoc";
+	grid-gap: 20px;
+}
+
+nav#navbar {
+	grid-area: navbar;
+	position: fixed;
+}
+
+nav#navbar a {
+	display: block;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 20px 0;
+	
+}
+
+main#main-doc {
+	grid-area: maindoc;
 }
